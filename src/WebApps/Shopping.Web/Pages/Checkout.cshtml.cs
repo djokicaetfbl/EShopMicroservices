@@ -24,7 +24,7 @@ namespace Shopping.Web.Pages
             }
 
             // assumption is passed in from the UI authenticated user swn
-            Order.CustomerId = new Guid("bfb9c8e7-1c9d-4a3b-9f0e-2a5d6c7e8f9a");
+            Order.CustomerId = new Guid("58c49479-ec65-4de2-86e7-033c546291aa");
             Order.UserName = Cart.UserName;
             Order.TotalPrice = Cart.TotalPrice;
 

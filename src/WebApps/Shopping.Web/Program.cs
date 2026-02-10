@@ -11,7 +11,11 @@ builder.Services.AddRefitClient<ICatalogService>()
 
 
 builder.Services.AddRefitClient<IBasketService>()
+    .ConfigureHttpClient(c => c.BaseAddress = new Uri(builder.Configuration["ApiSettings:GatewayAddress"]!)); // registruj servis da ide preko reffit-a
+
+builder.Services.AddRefitClient<IOrderingService>()
     .ConfigureHttpClient(c => c.BaseAddress = new Uri(builder.Configuration["ApiSettings:GatewayAddress"]!));
+
 
 
 var app = builder.Build();
